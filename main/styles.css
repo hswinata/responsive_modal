@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -12,7 +12,7 @@
 }
 
 .overlay {
-  position: fixed;
+  /* position: fixed; */
   height: 100vh;
   width: 100vw;
   background: #f7f7f7;
@@ -44,24 +44,25 @@
 .modal__close {
   position: absolute;
   right: 1%;
-  top: 2%;
+  top: 3%;
 
   width: 30px;
   height: 30px;
   font-size: 24px;
   color: rgb(158, 155, 155);
   background-color: white;
+  border: 1px;
 
-  border-radius: 50%;
+  cursor: pointer;
 }
 
 .modal__image {
-  background-image: url("https://olo-images-live.imgix.net/f7/f791dba4fc48450faa24d51159af3f93.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=716&h=474&fit=crop&fm=png32&s=4aff9382798fe00546bbbc128217ad08");
-  background-size: cover;
-  background-position: center;
   width: 100%;
   flex-basis: 466px;
   background-color: #f7034e;
+  background-image: url("https://olo-images-live.imgix.net/f7/f791dba4fc48450faa24d51159af3f93.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=716&h=474&fit=crop&fm=png32&s=4aff9382798fe00546bbbc128217ad08");
+  background-size: cover;
+  background-position: center;
 }
 
 .modal__content {
@@ -70,6 +71,7 @@
   padding: 20px;
   flex-basis: 466px;
   justify-content: center;
+  gap: 0px;
   background-color: white;
 }
 
@@ -80,6 +82,8 @@
 }
 
 .modal__content-header {
+  text-align: center;
+
   font-size: 24px;
   line-height: 1.2;
   font-family: var(--open-sans-font-stack);
@@ -95,6 +99,7 @@
 }
 
 .modal__content-button {
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -128,6 +133,7 @@
   justify-content: center;
   background-color: white;
   cursor: pointer;
+  padding: 20px 20px;
 }
 
 .modal__navigation-dot {
@@ -145,23 +151,42 @@
   display: none !important;
 }
 
-/*Media queries portrait:*/
+/*Portrait:*/
 @media (max-width: 768px) {
-  .modal__close-desktop {
-    display: none !important;
+  .modal {
+    height: auto;
+    width: 330px;
   }
 
   .modal__slide {
-    flex-direction: column !important;
+    flex-direction: column;
+    height: auto;
+    flex-basis: 330px;
+
+    position: relative;
+  }
+
+  .modal__image {
+    height: 330px;
+    flex-basis: 330px;
+  }
+
+  .modal__close-desktop {
+    display: none;
   }
 
   .modal__content {
-    align-items: center !important;
+    align-items: center;
   }
 
   .modal__content-text {
-    text-align: center !important;
+    text-align: center;
   }
 }
 
-/*Media queries landscape:*/
+/*Landscape:*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .modal__close-mobile {
+    display: none !important;
+  }
+}
