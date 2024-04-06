@@ -12,7 +12,7 @@
 }
 
 .overlay {
-  /* position: fixed; */
+  position: fixed;
   height: 100vh;
   width: 100vw;
   background: #f7f7f7;
@@ -84,14 +84,14 @@
 .modal__content-header {
   text-align: center;
 
-  font-size: 24px;
+  font-size: 30px;
   line-height: 1.2;
   font-family: var(--open-sans-font-stack);
   margin-bottom: 20px;
 }
 
 .modal__content-text {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: var(--open-sans-font-stack);
   max-width: 100%;
@@ -151,19 +151,23 @@
   display: none !important;
 }
 
-/*Portrait:*/
-@media (max-width: 768px) {
+/*Media queries:*/
+@media (max-width: 934px) {
   .modal {
     height: auto;
     width: 330px;
+    margin: auto;
   }
 
   .modal__slide {
     flex-direction: column;
     height: auto;
-    flex-basis: 330px;
-
+    max-width: 330px;
     position: relative;
+  }
+
+  .modal__close {
+    top: 0.8%;
   }
 
   .modal__image {
@@ -172,21 +176,40 @@
   }
 
   .modal__close-desktop {
-    display: none;
+    display: none !important;
   }
 
   .modal__content {
     align-items: center;
+    height: auto;
+    max-width: 330px;
+    flex-basis: auto;
+  }
+
+  .modal__content-header {
+    font-size: 22px;
   }
 
   .modal__content-text {
     text-align: center;
+    font-size: 14px;
+  }
+
+  .modal__navigation {
+    max-width: 330px;
+    margin: auto;
   }
 }
 
 /*Landscape:*/
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (orientation: landscape) and (max-width: 934px) {
   .modal__close-mobile {
     display: none !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .overlay {
+    overflow-y: scroll;
   }
 }
