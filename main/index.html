@@ -13,10 +13,15 @@
     <div class="overlay">
       <div class="modal">
         <!--First slide-->
-        <div class="modal__slide">
+        <div class="modal__slide" data-active>
           <button class="modal__close modal__close-desktop">&times</button>
-          <div class="modal__image"></div>
-          <div class="modal__content">
+          <div
+            class="modal__image"
+            style="
+              background-image: url('https://s3.amazonaws.com/PandaExpressWebsite/www/pr-2022-get-app-bg-mobile.svg');
+            "
+          ></div>
+          <div class="modal__content" >
             <button class="modal__close">&times</button>
             <img
               class="modal__content-logo"
@@ -37,12 +42,40 @@
             </div>
           </div>
         </div>
+
+        <!--Second slide-->
+        <div class="modal__slide">
+          <button class="modal__close modal__close-desktop">&times</button>
+          <div
+            class="modal__image"
+            style="
+              background-image: url('https://www.pandaexpress.com/sites/default/files/styles/webp_conversion/public/2021-09/Orange%20Chicken%402x.png.webp?itok=PA83NHD3');
+            "
+          ></div>
+          <div class="modal__content">
+            <button class="modal__close">&times</button>
+            <h1 class="modal__content-header">
+              The Original Orange Chicken® 🍗
+            </h1>
+            <p class="modal__content-text">
+              The Original Orange Chicken® is inspired by a well-known appetizer
+              called chenpi niurou (tangerine peel beef), in which slices of
+              boneless beef are marinated, deep-fried and then wok-cooked with
+              dried chillies, Sichuan pepper and tangerine peel.
+            </p>
+            <div class="modal__content-button">
+              <button class="main-btn">HAVE A TASTE!</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Navigation-->
         <div class="modal__navigation">
-          <button class="prev data-navigation-button"><</button>
+          <button class="prev"><</button>
           <span id="js-slide-one" class="modal__navigation-dot isActive"></span>
           <span id="js-slide-two" class="modal__navigation-dot isActive"></span>
 
-          <button class="next data-navigation-button">></button>
+          <button class="next">></button>
         </div>
       </div>
     </div>

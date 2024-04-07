@@ -35,7 +35,7 @@ body {
 }
 
 .modal__slide {
-  display: flex;
+  display: none;
   flex-direction: row;
   height: 467px;
   max-width: 934px;
@@ -43,6 +43,10 @@ body {
   margin: auto;
 
   position: relative;
+}
+
+.modal__slide[data-active] {
+  display: flex;
 }
 
 .modal__close {
@@ -63,9 +67,9 @@ body {
 .modal__image {
   width: 100%;
   flex-basis: 466px;
-  background-image: url("https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: bottom;
+  background-color: #f7034e;
 }
 
 .modal__content {
