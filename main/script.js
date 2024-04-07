@@ -3,6 +3,34 @@ const next = document.querySelector(".next");
 const slides = document.querySelectorAll(".modal__slide");
 const dots = document.querySelectorAll(".modal__navigation-dot");
 
+//Dot functions
+function deactivateDot() {
+  const activeDot = document.querySelector(
+    ".modal__navigation-dot[data-active]"
+  );
+  if (activeDot) {
+    activeDot.removeAttribute("data-active");
+  }
+}
+
+function activateNextDot() {
+  const activeIndex = Array.from(dots).findIndex((dot) =>
+    dot.hasAttribute("data-active")
+  );
+  deactivateDot();
+  const nextIndex = (activeIndex + 1) % dots.length;
+  dots[nextIndex].setAttribute("data-active", "");
+}
+
+function activatePrevDot() {
+  const activeIndex = Array.from(dots).findIndex((dot) => {
+    dot.hasAttribute("data-active");
+  });
+  deactivateDot();
+  const prevIndex = (activeIndex - 1 + dots.length) % dots.length;
+  dots[prevIndex].setAttribute("data-active", "");
+}
+
 //Slide functions
 function deactivateSlide() {
   const activeSlide = document.querySelector(".modal__slide[data-active]");
@@ -29,23 +57,10 @@ function activatePrevSlide() {
   slides[prevIndex].setAttribute("data-active", "");
 }
 
-//Dot functions
-function deactivateDot() {
-  const activeDot = document.querySelector(
-    ".modal__navigation-dot[data-active]"
-  );
-  if (activeDot) {
-    activeDot.removeAttribute("data-active");
-  }
-}
-
-function activateNextDot() {
-  const activeIndex = Array.from(dots).findIndex((dot) => {
-    dot.hasAttribute("data-active");
-  });
-  deactivateDot();
-  const nextIndex = activeIndex + 1;
-}
-
-next.addEventListener("click", activateNextSlide);
-prev.addEventListener("click", activatePrevSlide);
+next.addEventListener("click", () => {
+  activateNextDot();
+  activateNextSlide();
+});
+prev.addEventListener("click", () => {
+  activatePrevDot();
+});
