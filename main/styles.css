@@ -67,9 +67,10 @@ body {
 .modal__image {
   width: 100%;
   flex-basis: 466px;
-  background-size: contain;
-  background-position: bottom;
   background-color: #f7034e;
+  background-size: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .modal__content {
@@ -77,15 +78,8 @@ body {
   flex-direction: column;
   padding: 20px;
   flex-basis: 466px;
-  justify-content: center;
-  gap: 0px;
+  /* justify-content: center; */
   background-color: white;
-}
-
-.modal__content-logo {
-  align-self: center;
-  width: 100px;
-  margin-bottom: 20px;
 }
 
 .modal__content-header {
@@ -93,7 +87,8 @@ body {
   font-size: 30px;
   line-height: 1.2;
   font-family: var(--open-sans-font-stack);
-  margin-bottom: 20px;
+  margin-top: auto;
+  padding: 0px 10px 20px 10px;
 }
 
 .modal__content-text {
@@ -101,17 +96,15 @@ body {
   text-align: center;
   line-height: 1.5;
   font-family: var(--open-sans-font-stack);
-
-  max-width: 100%;
-  margin-bottom: 20px;
+  padding: 0px 10px 20px 10px;
 }
 
 .modal__content-button {
-  padding-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  margin-top: auto;
 }
 
 .main-btn,
@@ -207,6 +200,7 @@ body {
   .main-btn,
   .secondary-btn {
     width: 200px;
+    padding: 0 20px;
   }
 
   .modal__navigation {
@@ -250,7 +244,7 @@ body {
     font-size: 20px;
     line-height: 1.2;
     font-family: var(--open-sans-font-stack);
-    margin-bottom: 20px;
+    padding: 0px 10px 20px 10px;
   }
 
   .modal__content-text {

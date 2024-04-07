@@ -63,4 +63,5 @@ next.addEventListener("click", () => {
 });
 prev.addEventListener("click", () => {
   activatePrevDot();
+  activatePrevSlide();
 });

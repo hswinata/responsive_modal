@@ -14,19 +14,23 @@
       <div class="modal">
         <!--First slide-->
         <div class="modal__slide" data-active>
-          <button class="modal__close modal__close-desktop">&times</button>
+          <button
+            class="modal__close modal__close-desktop"
+            onclick="brazeBridge.closeMessage()"
+          >
+            &times
+          </button>
           <div
             class="modal__image"
             style="
-              background-image: url('https://s3.amazonaws.com/PandaExpressWebsite/www/pr-2022-get-app-bg-mobile.svg');
+              background-image: url('https://cdn.freebiesupply.com/logos/large/2x/panda-express-logo-1-logo-png-transparent.png');
             "
           ></div>
           <div class="modal__content">
-            <button class="modal__close">&times</button>
-            <img
-              class="modal__content-logo"
-              src="https://cdn.freebiesupply.com/logos/large/2x/panda-express-logo-1-logo-png-transparent.png"
-            />
+            <button class="modal__close" onclick="brazeBridge.closeMessage()">
+              &times
+            </button>
+
             <h1 class="modal__content-header">
               Straight from California: Panda Express!
             </h1>
@@ -37,15 +41,24 @@
               your doorstep.
             </p>
             <div class="modal__content-button">
-              <button class="main-btn">ORDER NOW</button>
-              <button class="secondary-btn">READ THE HISTORY</button>
+              <button class="main-btn" onclick="brazeBridge.logClick(0);">
+                ORDER NOW
+              </button>
+              <button class="secondary-btn" onclick="brazeBridge.logClick(1);">
+                READ THE HISTORY
+              </button>
             </div>
           </div>
         </div>
 
         <!--Second slide-->
         <div class="modal__slide">
-          <button class="modal__close modal__close-desktop">&times</button>
+          <button
+            class="modal__close modal__close-desktop"
+            onclick="brazeBridge.closeMessage()"
+          >
+            &times
+          </button>
           <div
             class="modal__image"
             style="
@@ -53,18 +66,22 @@
             "
           ></div>
           <div class="modal__content">
-            <button class="modal__close">&times</button>
+            <button class="modal__close" onclick="brazeBridge.closeMessage()">
+              &times
+            </button>
             <h1 class="modal__content-header">
               The Original Orange Chicken® 🍗
             </h1>
             <p class="modal__content-text">
-              The Original Orange Chicken® is inspired by a well-known appetizer
-              called chenpi niurou (tangerine peel beef), in which slices of
-              boneless beef are marinated, deep-fried and then wok-cooked with
-              dried chillies, Sichuan pepper and tangerine peel.
+              This dish is inspired by a well-known appetizer called chenpi
+              niurou (tangerine peel beef), in which slices of boneless beef are
+              marinated, deep-fried and then wok-cooked with dried chillies,
+              Sichuan pepper and tangerine peel.
             </p>
             <div class="modal__content-button">
-              <button class="main-btn">HAVE A TASTE!</button>
+              <button class="main-btn" onclick="brazeBridge.logClick(0)">
+                HAVE A TASTE!
+              </button>
             </div>
           </div>
         </div>
