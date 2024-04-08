@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid red; */
 }
 
 body {
@@ -78,7 +77,6 @@ body {
   flex-direction: column;
   padding: 20px;
   flex-basis: 466px;
-  /* justify-content: center; */
   background-color: white;
 }
 
@@ -266,12 +264,12 @@ body {
   }
 }
 
-@media (orientation: landscape) and (max-width: 569px) {
+/* @media (orientation: landscape) and (max-width: 569px) {
   .modal {
     max-width: 568px;
     flex-basis: 568px;
   }
-}
+} */
 
 @media (max-width: 430px) {
   .modal {

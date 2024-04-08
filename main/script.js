@@ -13,22 +13,25 @@ function deactivateDot() {
   }
 }
 
+function activateDotByIndex(index) {
+  deactivateDot();
+  const newIndex = (index + dots.length) % dots.length;
+  dots[newIndex].setAttribute("data-active", "");
+}
+
 function activateNextDot() {
   const activeIndex = Array.from(dots).findIndex((dot) =>
     dot.hasAttribute("data-active")
   );
   deactivateDot();
-  const nextIndex = (activeIndex + 1) % dots.length;
-  dots[nextIndex].setAttribute("data-active", "");
+  activateDotByIndex(activeIndex + 1);
 }
 
 function activatePrevDot() {
   const activeIndex = Array.from(dots).findIndex((dot) => {
     dot.hasAttribute("data-active");
   });
-  deactivateDot();
-  const prevIndex = (activeIndex - 1 + dots.length) % dots.length;
-  dots[prevIndex].setAttribute("data-active", "");
+  activateDotByIndex(activeIndex - 1);
 }
 
 //Slide functions
@@ -39,22 +42,24 @@ function deactivateSlide() {
   }
 }
 
+function activateSlideByIndex(index) {
+  deactivateSlide();
+  const newIndex = (index + slides.length) % dots.length;
+  slides[newIndex].setAttribute("data-active", "");
+}
+
 function activateNextSlide() {
   const activeIndex = Array.from(slides).findIndex((slide) =>
     slide.hasAttribute("data-active")
   );
-  deactivateSlide();
-  const nextIndex = (activeIndex + 1) % slides.length;
-  slides[nextIndex].setAttribute("data-active", "");
+  activateSlideByIndex(activeIndex + 1);
 }
 
 function activatePrevSlide() {
   const activeIndex = Array.from(slides).findIndex((slide) =>
     slide.hasAttribute("data-active")
   );
-  deactivateSlide();
-  const prevIndex = (activeIndex - 1 + slides.length) % slides.length;
-  slides[prevIndex].setAttribute("data-active", "");
+  activateSlideByIndex(activeIndex - 1);
 }
 
 next.addEventListener("click", () => {
