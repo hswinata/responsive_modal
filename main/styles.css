@@ -15,11 +15,11 @@ body {
 }
 
 .overlay {
+  display: flex;
   position: fixed;
   height: 100vh;
   width: 100vw;
   background: #f7f7f7;
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: grey;
@@ -27,10 +27,15 @@ body {
 }
 
 .modal {
+  display: none;
   height: 467px;
   max-width: 934px;
   flex-basis: 934px;
   margin: auto;
+}
+
+.modal[data-active] {
+  display: block;
 }
 
 .modal__slide {

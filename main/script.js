@@ -1,7 +1,14 @@
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
+const closeButtons = document.querySelectorAll(".modal__close");
 const slides = document.querySelectorAll(".modal__slide");
 const dots = document.querySelectorAll(".modal__navigation-dot");
+
+//Close function
+function closeModal() {
+  const activeSlide = document.querySelector(".modal[data-active]");
+  activeSlide.removeAttribute("data-active");
+}
 
 //Dot functions
 function deactivateDot() {
@@ -66,7 +73,12 @@ next.addEventListener("click", () => {
   activateNextDot();
   activateNextSlide();
 });
+
 prev.addEventListener("click", () => {
   activatePrevDot();
   activatePrevSlide();
+});
+
+Array.from(closeButtons).forEach((button) => {
+  button.addEventListener("click", closeModal);
 });
