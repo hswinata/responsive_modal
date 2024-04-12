@@ -133,12 +133,16 @@ body {
 }
 
 .modal__carousel {
-  display: flex;
+  display: none;
   gap: 5px;
   justify-content: center;
   align-items: baseline;
   cursor: pointer;
   padding: 10px 10px;
+}
+
+.modal__carousel[data-active] {
+  display: flex;
 }
 
 .modal__carousel-dot {

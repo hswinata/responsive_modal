@@ -1,21 +1,37 @@
 import { closeModal } from "./js/modal.js";
-import { activateNextSlide, activatePrevSlide } from "./js/slide.js";
-import { activateNextDot, activatePrevDot } from "./js/dot.js";
+import {
+  activateNextSlide,
+  activatePrevSlide,
+  activateSlideByIndex,
+} from "./js/slide.js";
+import {
+  dots,
+  activateNextDot,
+  activatePrevDot,
+  activateDotByIndex,
+} from "./js/dot.js";
 
 const closeButtons = document.querySelectorAll(".modal__close");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
 
-next.addEventListener("click", () => {
+nextButton.addEventListener("click", () => {
   activateNextDot();
   activateNextSlide();
 });
 
-prev.addEventListener("click", () => {
+prevButton.addEventListener("click", () => {
   activatePrevDot();
   activatePrevSlide();
 });
 
-Array.from(closeButtons).forEach((button) => {
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    activateDotByIndex(index);
+    activateSlideByIndex(index);
+  });
+});
+
+closeButtons.forEach((button) => {
   button.addEventListener("click", closeModal);
 });

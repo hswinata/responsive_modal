@@ -7,7 +7,7 @@ function deactivateSlide() {
   }
 }
 
-function activateSlideByIndex(index) {
+export function activateSlideByIndex(index) {
   deactivateSlide();
   const newIndex = (index + slides.length) % slides.length;
   slides[newIndex].setAttribute("data-active", "");

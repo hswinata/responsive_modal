@@ -1,4 +1,4 @@
-const dots = document.querySelectorAll(".modal__carousel-dot");
+export const dots = document.querySelectorAll(".modal__carousel-dot");
 
 function deactivateDot() {
   const activeDot = document.querySelector(".modal__carousel-dot[data-active]");
@@ -7,7 +7,7 @@ function deactivateDot() {
   }
 }
 
-function activateDotByIndex(index) {
+export function activateDotByIndex(index) {
   deactivateDot();
   const newIndex = (index + dots.length) % dots.length;
   dots[newIndex].setAttribute("data-active", "");
