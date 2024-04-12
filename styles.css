@@ -16,24 +16,23 @@ body {
 
 .overlay {
   display: flex;
+  flex-direction: column;
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background: #f7f7f7;
   align-items: center;
   justify-content: center;
   background-color: grey;
-  /* z-index: 99999; */
+  z-index: 1;
 }
 
 .modal {
   position: relative;
 
   display: none;
-  height: 467px;
+  height: auto;
   max-width: 934px;
-  flex-basis: 934px;
-  margin: auto;
 }
 
 .modal[data-active] {
@@ -139,7 +138,7 @@ body {
   justify-content: center;
   align-items: baseline;
   cursor: pointer;
-  padding: 20px 20px;
+  padding: 10px 10px;
 }
 
 .modal__carousel-dot {
@@ -155,7 +154,7 @@ body {
 
 .next,
 .prev {
-  top: 37%;
+  top: 44%;
   position: absolute;
   z-index: 1;
   border: none;
@@ -164,6 +163,7 @@ body {
   padding: 0px 5px;
   color: white;
   cursor: pointer;
+  opacity: 50%;
 }
 
 .prev {
@@ -178,12 +178,17 @@ body {
   display: none !important;
 }
 
-/*Media Queries:*/
+.modal__carousel {
+  margin: 0 auto;
+}
+
+/*Portrait*/
 @media (max-width: 934px) {
   .modal {
     height: auto;
-    max-width: 480px;
     margin: auto;
+    max-width: 480px;
+    margin: 0;
   }
 
   .modal__slide {
@@ -221,14 +226,29 @@ body {
 
   .modal__carousel {
     max-width: 480px;
-    margin: auto;
+    margin: 0;
+  }
+
+  .prev {
+    left: -7%;
+  }
+
+  .next {
+    right: -7%;
+  }
+
+  .prev,
+  .next {
+    top: 47%;
   }
 }
 
+/*Landscape*/
 @media (orientation: landscape) and (max-width: 934px) {
   .modal {
     max-width: 654px;
-    flex-basis: 654px;
+    width: 100%;
+    margin: 0;
   }
 
   .modal__slide {
@@ -280,13 +300,18 @@ body {
   .modal__close-mobile {
     display: none !important;
   }
+
+  .modal__carousel {
+    margin: 0;
+  }
 }
 
+/*Portrait*/
 @media (max-width: 430px) {
   .modal {
     height: auto;
     max-width: 330px;
-    margin: auto;
+    margin: 0;
   }
 
   .modal__slide {
@@ -332,10 +357,25 @@ body {
 
   .modal__carousel {
     max-width: 330px;
-    margin: auto;
+    margin: 0;
   }
 
   .overlay {
     overflow-y: scroll;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .prev,
+  .next {
+    top: 49%;
+    background-color: grey;
+    opacity: 50%;
   }
 }
