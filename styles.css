@@ -23,10 +23,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: grey;
-  z-index: 99999;
+  /* z-index: 99999; */
 }
 
 .modal {
+  position: relative;
+
   display: none;
   height: 467px;
   max-width: 934px;
@@ -131,7 +133,7 @@ body {
   border: 2px solid #f7034e;
 }
 
-.modal__navigation {
+.modal__carousel {
   display: flex;
   gap: 5px;
   justify-content: center;
@@ -140,25 +142,36 @@ body {
   padding: 20px 20px;
 }
 
-.modal__navigation-dot {
+.modal__carousel-dot {
   border: 1px solid red;
   border-radius: 50%;
   height: 14px;
   width: 14px;
 }
 
-.modal__navigation-dot[data-active] {
+.modal__carousel-dot[data-active] {
   background-color: #f7034e;
 }
 
 .next,
 .prev {
+  top: 37%;
+  position: absolute;
+  z-index: 1;
   border: none;
   background: none;
-  font-size: 18px;
+  font-size: 40px;
   padding: 0px 5px;
   color: white;
   cursor: pointer;
+}
+
+.prev {
+  left: -6%;
+}
+
+.next {
+  right: -6%;
 }
 
 .modal__close-mobile {
@@ -206,7 +219,7 @@ body {
     padding: 0 20px;
   }
 
-  .modal__navigation {
+  .modal__carousel {
     max-width: 480px;
     margin: auto;
   }
@@ -317,7 +330,7 @@ body {
     width: 100%;
   }
 
-  .modal__navigation {
+  .modal__carousel {
     max-width: 330px;
     margin: auto;
   }

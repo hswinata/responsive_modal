@@ -15,6 +15,9 @@
   <body>
     <div class="overlay">
       <div class="modal" data-active>
+        <button class="prev"><</button>
+        <button class="next">></button>
+
         <!--First slide-->
         <div class="modal__slide" data-active>
           <button
@@ -90,15 +93,13 @@
         </div>
 
         <!--Navigation-->
-        <div class="modal__navigation">
-          <button class="prev"><</button>
+        <div class="modal__carousel">
           <span
             id="js-slide-one"
-            class="modal__navigation-dot"
+            class="modal__carousel-dot"
             data-active
           ></span>
-          <span id="js-slide-two" class="modal__navigation-dot"></span>
-          <button class="next">></button>
+          <span id="js-slide-two" class="modal__carousel-dot"></span>
         </div>
       </div>
     </div>

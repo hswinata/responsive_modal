@@ -1,9 +1,7 @@
-const dots = document.querySelectorAll(".modal__navigation-dot");
+const dots = document.querySelectorAll(".modal__carousel-dot");
 
 function deactivateDot() {
-  const activeDot = document.querySelector(
-    ".modal__navigation-dot[data-active]"
-  );
+  const activeDot = document.querySelector(".modal__carousel-dot[data-active]");
   if (activeDot) {
     activeDot.removeAttribute("data-active");
   }
