@@ -9,21 +9,20 @@ function deactivateDot() {
 
 export function activateDotByIndex(index) {
   deactivateDot();
-  const newIndex = (index + dots.length) % dots.length;
-  dots[newIndex].setAttribute("data-active", "");
+  const newDotIndex = (index + dots.length) % dots.length;
+  dots[newDotIndex].setAttribute("data-active", "");
 }
 
 export function activateNextDot() {
-  const activeIndex = Array.from(dots).findIndex((dot) =>
-    dot.hasAttribute("data-active")
-  );
-  deactivateDot();
-  activateDotByIndex(activeIndex + 1);
+  const activeDotIndex = Array.from(dots).findIndex((dot) => {
+    return dot.hasAttribute("data-active");
+  });
+  activateDotByIndex(activeDotIndex + 1);
 }
 
 export function activatePrevDot() {
-  const activeIndex = Array.from(dots).findIndex((dot) => {
-    dot.hasAttribute("data-active");
+  const activeDotIndex = Array.from(dots).findIndex((dot) => {
+    return dot.hasAttribute("data-active");
   });
-  activateDotByIndex(activeIndex - 1);
+  activateDotByIndex(activeDotIndex - 1);
 }

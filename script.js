@@ -1,5 +1,6 @@
 import { closeModal } from "./js/modal.js";
 import {
+  slides,
   activateNextSlide,
   activatePrevSlide,
   activateSlideByIndex,
@@ -29,8 +30,8 @@ modal.addEventListener("touchend", handleTouchEnd);
 
 //Prev and next functions
 nextButton.addEventListener("click", () => {
-  activateNextDot();
   activateNextSlide();
+  activateNextDot();
 });
 
 prevButton.addEventListener("click", () => {
@@ -38,7 +39,7 @@ prevButton.addEventListener("click", () => {
   activatePrevSlide();
 });
 
-//Click dot functions
+//Dot click functions
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     activateDotByIndex(index);

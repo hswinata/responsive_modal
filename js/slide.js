@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll(".modal__slide");
+export const slides = document.querySelectorAll(".modal__slide");
 
 function deactivateSlide() {
   const activeSlide = document.querySelector(".modal__slide[data-active]");
@@ -9,20 +9,20 @@ function deactivateSlide() {
 
 export function activateSlideByIndex(index) {
   deactivateSlide();
-  const newIndex = (index + slides.length) % slides.length;
-  slides[newIndex].setAttribute("data-active", "");
+  const newSlideIndex = (index + slides.length) % slides.length;
+  slides[newSlideIndex].setAttribute("data-active", "");
 }
 
 export function activateNextSlide() {
-  const activeIndex = Array.from(slides).findIndex((slide) =>
-    slide.hasAttribute("data-active")
-  );
-  activateSlideByIndex(activeIndex + 1);
+  const activeSlideIndex = Array.from(slides).findIndex((slide) => {
+    return slide.hasAttribute("data-active");
+  });
+  activateSlideByIndex(activeSlideIndex + 1);
 }
 
 export function activatePrevSlide() {
-  const activeIndex = Array.from(slides).findIndex((slide) =>
-    slide.hasAttribute("data-active")
-  );
-  activateSlideByIndex(activeIndex - 1);
+  const activeSlideIndex = Array.from(slides).findIndex((slide) => {
+    return slide.hasAttribute("data-active");
+  });
+  activateSlideByIndex(activeSlideIndex - 1);
 }

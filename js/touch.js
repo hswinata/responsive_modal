@@ -37,14 +37,12 @@ export function handleTouchEnd(e) {
     if (absDistX > absDistY) {
       if (distX > 0) {
         //swipeRight
-        activateNextSlide();
-        activateNextDot();
-        console.log("Swipe left", absDistX);
-      } else {
-        //swipeLeft
         activatePrevSlide();
         activatePrevDot();
-        console.log("Swipe right", absDistX);
+      } else {
+        //swipeLeft
+        activateNextSlide();
+        activateNextDot();
       }
     }
   }
