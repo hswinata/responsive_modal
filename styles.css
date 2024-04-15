@@ -34,6 +34,8 @@ body {
   height: auto;
   max-width: 934px;
   cursor: pointer;
+
+  border: 2px green solid;
 }
 
 .modal[data-active] {
@@ -49,6 +51,8 @@ body {
   margin: auto;
 
   position: relative;
+
+  border: 2px yellow solid;
 }
 
 .modal__slide[data-active] {
