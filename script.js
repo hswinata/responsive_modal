@@ -24,7 +24,7 @@ prevButton.addEventListener("click", () => {
   activatePrevDot();
   activatePrevSlide();
 });
-
+g
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     activateDotByIndex(index);

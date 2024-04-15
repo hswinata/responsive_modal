@@ -33,6 +33,7 @@ body {
   display: none;
   height: auto;
   max-width: 934px;
+  cursor: pointer;
 }
 
 .modal[data-active] {
