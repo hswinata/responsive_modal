@@ -32,10 +32,8 @@ body {
 
   display: none;
   height: auto;
-  max-width: 934px;
+  width: 934px;
   cursor: pointer;
-
-  border: 2px green solid;
 }
 
 .modal[data-active] {
@@ -46,13 +44,9 @@ body {
   display: none;
   flex-direction: row;
   height: 467px;
-  max-width: 934px;
-  flex-basis: 934px;
+  width: 934px;
   margin: auto;
-
   position: relative;
-
-  border: 2px yellow solid;
 }
 
 .modal__slide[data-active] {
@@ -75,8 +69,7 @@ body {
 }
 
 .modal__image {
-  width: 100%;
-  flex-basis: 466px;
+  width: 467px;
   background-color: #f7034e;
   background-size: 300px;
   background-position: center;
@@ -87,7 +80,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  flex-basis: 466px;
+  width: 467px;
   background-color: white;
 }
 
@@ -196,14 +189,14 @@ body {
   .modal {
     height: auto;
     margin: auto;
-    max-width: 480px;
+    max-width: 475px;
     margin: 0;
   }
 
   .modal__slide {
     flex-direction: column;
     height: auto;
-    max-width: 480px;
+    max-width: 100%;
     position: relative;
   }
 
@@ -223,7 +216,7 @@ body {
   .modal__content {
     align-items: center;
     height: auto;
-    max-width: 480px;
+    max-width: 475px;
     flex-basis: auto;
   }
 
@@ -336,7 +329,7 @@ body {
 
   .modal__image {
     height: 330px;
-    flex-basis: 330px;
+    max-width: 330px;
   }
 
   .modal__close-desktop {
