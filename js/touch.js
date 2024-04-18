@@ -16,6 +16,7 @@ export function handleTouchStart(e) {
 }
 
 export function handleTouchMove(e) {
+  //Prevent the default scrolling behavior, esp on browsers.
   e.preventDefault();
 
   const touch = e.touches[0];
@@ -37,10 +38,12 @@ export function handleTouchEnd(e) {
     if (absDistX > absDistY) {
       if (distX > 0) {
         //swipeRight
+        console.log("swipeRight activated");
         activatePrevSlide();
         activatePrevDot();
       } else {
         //swipeLeft
+        console.log("swipeLeft activated");
         activateNextSlide();
         activateNextDot();
       }

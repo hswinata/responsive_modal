@@ -1,6 +1,5 @@
 import { closeModal } from "./js/modal.js";
 import {
-  slides,
   activateNextSlide,
   activatePrevSlide,
   activateSlideByIndex,
@@ -18,28 +17,23 @@ import {
   handleTouchEnd,
 } from "./js/touch.js";
 
-const modal = document.querySelector(".modal");
+const slides = document.querySelectorAll(".modal__slide");
 const closeButtons = document.querySelectorAll(".modal__close");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
-//Swipe functions
-modal.addEventListener("touchstart", handleTouchStart);
-modal.addEventListener("touchmove", handleTouchMove);
-modal.addEventListener("touchend", handleTouchEnd);
-
-//Prev and next functions
-nextButton.addEventListener("click", () => {
+//Prev and next button functions
+nextButton.addEventListener("click", (e) => {
   activateNextSlide();
   activateNextDot();
 });
 
-prevButton.addEventListener("click", () => {
-  activatePrevDot();
+prevButton.addEventListener("click", (e) => {
   activatePrevSlide();
+  activatePrevDot();
 });
 
-//Dot click functions
+// Dot click functions
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     activateDotByIndex(index);
@@ -49,4 +43,11 @@ dots.forEach((dot, index) => {
 
 closeButtons.forEach((button) => {
   button.addEventListener("click", closeModal);
+});
+
+//Swipe functions
+slides.forEach((slide) => {
+  slide.addEventListener("touchstart", handleTouchStart, true);
+  slide.addEventListener("touchmove", handleTouchMove, true);
+  slide.addEventListener("touchend", handleTouchEnd, true);
 });

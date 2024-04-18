@@ -14,15 +14,20 @@ export function activateSlideByIndex(index) {
 }
 
 export function activateNextSlide() {
+  console.log("activate next slide triggered");
   const activeSlideIndex = Array.from(slides).findIndex((slide) => {
     return slide.hasAttribute("data-active");
   });
+  console.log(activeSlideIndex);
   activateSlideByIndex(activeSlideIndex + 1);
 }
 
 export function activatePrevSlide() {
+  console.log("activate prev slide triggered");
   const activeSlideIndex = Array.from(slides).findIndex((slide) => {
     return slide.hasAttribute("data-active");
   });
+  console.log(activeSlideIndex);
+
   activateSlideByIndex(activeSlideIndex - 1);
 }

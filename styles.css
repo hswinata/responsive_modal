@@ -55,8 +55,8 @@ body {
 
 .modal__close {
   position: absolute;
-  right: 1%;
-  top: 3%;
+  right: 0.6%;
+  top: 1%;
 
   width: 30px;
   height: 30px;
@@ -206,7 +206,8 @@ body {
   }
 
   .modal__close {
-    top: 0.8%;
+    top: 1%;
+    right: 3%;
   }
 
   .modal__close-desktop {
@@ -236,7 +237,7 @@ body {
   }
 
   .next {
-    right: -7%;
+    right: -5.2%;
   }
 
   .prev,
@@ -299,12 +300,20 @@ body {
     max-width: 250px;
   }
 
+  .modal__close {
+    right: 0.2%;
+  }
+
   .modal__close-mobile {
     display: none !important;
   }
 
   .modal__carousel {
     margin: 0;
+  }
+
+  .prev {
+    left: -5%;
   }
 }
 
@@ -324,6 +333,7 @@ body {
   }
 
   .modal__close {
+    right: 1.4%;
     top: 0.8%;
   }
 
