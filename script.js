@@ -1,5 +1,6 @@
 import { closeModal } from "./js/modal.js";
 import {
+  slides,
   activateNextSlide,
   activatePrevSlide,
   activateSlideByIndex,
@@ -17,7 +18,6 @@ import {
   handleTouchEnd,
 } from "./js/touch.js";
 
-const slides = document.querySelectorAll(".modal__slide");
 const closeButtons = document.querySelectorAll(".modal__close");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");

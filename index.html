@@ -14,119 +14,122 @@
   </head>
   <body>
     <div class="overlay">
-      <div class="modal" data-active>
-        <!--Navigation-->
+      <div class="modal__container">
         <button class="prev"><</button>
+        <div class="modal" data-active>
+          <!--Slide 1-->
+          <div class="modal__slide" data-active>
+            <button
+              class="modal__close modal__close-desktop"
+              onclick="brazeBridge.closeMessage()"
+            >
+              &times
+            </button>
+            <div
+              class="modal__image"
+              style="
+                background-image: url('https://cdn.freebiesupply.com/logos/large/2x/panda-express-logo-1-logo-png-transparent.png');
+              "
+            ></div>
+            <div class="modal__content">
+              <button class="modal__close" onclick="brazeBridge.closeMessage()">
+                &times
+              </button>
+
+              <h1 class="modal__content-header">
+                Straight from California: Panda Express!
+              </h1>
+              <p class="modal__content-text">
+                🎉 Exciting News for Foodies in Austria! 🍽️ Panda Express, the
+                beloved American-Chinese chain, is now on Foodora! Enjoy diverse
+                menu offerings, from Orange Chicken to Beijing Beef, delivered
+                to your doorstep.
+              </p>
+              <div class="modal__content-button">
+                <button class="main-btn" onclick="brazeBridge.logClick(0);">
+                  ORDER NOW
+                </button>
+                <button
+                  class="secondary-btn"
+                  onclick="brazeBridge.logClick(1);"
+                >
+                  READ THE HISTORY
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Slide 2-->
+          <div class="modal__slide">
+            <button
+              class="modal__close modal__close-desktop"
+              onclick="brazeBridge.closeMessage()"
+            >
+              &times
+            </button>
+            <div
+              class="modal__image"
+              style="
+                background-image: url('https://www.pandaexpress.com/sites/default/files/styles/webp_conversion/public/2021-09/Orange%20Chicken%402x.png.webp?itok=PA83NHD3');
+              "
+            ></div>
+            <div class="modal__content">
+              <button class="modal__close" onclick="brazeBridge.closeMessage()">
+                &times
+              </button>
+              <h1 class="modal__content-header">
+                The Original Orange Chicken® 🍗
+              </h1>
+              <p class="modal__content-text">
+                This dish is inspired by a well-known appetizer called chenpi
+                niurou (tangerine peel beef), in which slices of boneless beef
+                are marinated, deep-fried and then wok-cooked with dried
+                chillies, Sichuan pepper and tangerine peel.
+              </p>
+              <div class="modal__content-button">
+                <button class="main-btn" onclick="brazeBridge.logClick(0)">
+                  HAVE A TASTE!
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Slide 3-->
+          <div class="modal__slide">
+            <button
+              class="modal__close modal__close-desktop"
+              onclick="brazeBridge.closeMessage()"
+            >
+              &times
+            </button>
+            <div
+              class="modal__image"
+              style="
+                background-image: url('https://www.pandaexpress.com/sites/default/files/styles/webp_conversion/public/2021-09/Eggplant%20Tofu%402x.png.webp?itok=pf5iC-F8');
+              "
+            ></div>
+            <div class="modal__content">
+              <button class="modal__close" onclick="brazeBridge.closeMessage()">
+                &times
+              </button>
+              <h1 class="modal__content-header">
+                Feeling Vegan? Eggplant Tofu 🍆
+              </h1>
+              <p class="modal__content-text">
+                In China, tofu and other soybean products are eaten not only by
+                vegetarians, but also by almost everybody. Our Eggplant Tofu
+                combines fried tofu with the buttery tenderness of eggplant with
+                a sauce that's sweet, sour and savory.
+              </p>
+              <div class="modal__content-button">
+                <button class="main-btn" onclick="brazeBridge.logClick(0)">
+                  GIMME TOFU!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <button class="next">></button>
-
-        <!--First slide-->
-        <div class="modal__slide" data-active>
-          <button
-            class="modal__close modal__close-desktop"
-            onclick="brazeBridge.closeMessage()"
-          >
-            &times
-          </button>
-          <div
-            class="modal__image"
-            style="
-              background-image: url('https://cdn.freebiesupply.com/logos/large/2x/panda-express-logo-1-logo-png-transparent.png');
-            "
-          ></div>
-          <div class="modal__content">
-            <button class="modal__close" onclick="brazeBridge.closeMessage()">
-              &times
-            </button>
-
-            <h1 class="modal__content-header">
-              Straight from California: Panda Express!
-            </h1>
-            <p class="modal__content-text">
-              🎉 Exciting News for Foodies in Austria! 🍽️ Panda Express, the
-              beloved American-Chinese chain, is now on Foodora! Enjoy diverse
-              menu offerings, from Orange Chicken to Beijing Beef, delivered to
-              your doorstep.
-            </p>
-            <div class="modal__content-button">
-              <button class="main-btn" onclick="brazeBridge.logClick(0);">
-                ORDER NOW
-              </button>
-              <button class="secondary-btn" onclick="brazeBridge.logClick(1);">
-                READ THE HISTORY
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!--Second slide-->
-        <div class="modal__slide">
-          <button
-            class="modal__close modal__close-desktop"
-            onclick="brazeBridge.closeMessage()"
-          >
-            &times
-          </button>
-          <div
-            class="modal__image"
-            style="
-              background-image: url('https://www.pandaexpress.com/sites/default/files/styles/webp_conversion/public/2021-09/Orange%20Chicken%402x.png.webp?itok=PA83NHD3');
-            "
-          ></div>
-          <div class="modal__content">
-            <button class="modal__close" onclick="brazeBridge.closeMessage()">
-              &times
-            </button>
-            <h1 class="modal__content-header">
-              The Original Orange Chicken® 🍗
-            </h1>
-            <p class="modal__content-text">
-              This dish is inspired by a well-known appetizer called chenpi
-              niurou (tangerine peel beef), in which slices of boneless beef are
-              marinated, deep-fried and then wok-cooked with dried chillies,
-              Sichuan pepper and tangerine peel.
-            </p>
-            <div class="modal__content-button">
-              <button class="main-btn" onclick="brazeBridge.logClick(0)">
-                HAVE A TASTE!
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!--Third slide-->
-        <div class="modal__slide">
-          <button
-            class="modal__close modal__close-desktop"
-            onclick="brazeBridge.closeMessage()"
-          >
-            &times
-          </button>
-          <div
-            class="modal__image"
-            style="
-              background-image: url('https://www.pandaexpress.com/sites/default/files/styles/webp_conversion/public/2021-09/Eggplant%20Tofu%402x.png.webp?itok=pf5iC-F8');
-            "
-          ></div>
-          <div class="modal__content">
-            <button class="modal__close" onclick="brazeBridge.closeMessage()">
-              &times
-            </button>
-            <h1 class="modal__content-header">
-              Feeling Vegan? Eggplant Tofu 🍆
-            </h1>
-            <p class="modal__content-text">
-              In China, tofu and other soybean products are eaten not only by
-              vegetarians, but also by almost everybody. Our Eggplant Tofu
-              combines fried tofu with the buttery tenderness of eggplant with a
-              sauce that's sweet, sour and savory.
-            </p>
-            <div class="modal__content-button">
-              <button class="main-btn" onclick="brazeBridge.logClick(0)">
-                GIMME TOFU!
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!--Carousel-->

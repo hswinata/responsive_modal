@@ -38,12 +38,10 @@ export function handleTouchEnd(e) {
     if (absDistX > absDistY) {
       if (distX > 0) {
         //swipeRight
-        console.log("swipeRight activated");
         activatePrevSlide();
         activatePrevDot();
       } else {
         //swipeLeft
-        console.log("swipeLeft activated");
         activateNextSlide();
         activateNextDot();
       }

@@ -1,4 +1,6 @@
 export const slides = document.querySelectorAll(".modal__slide");
+const modal = document.querySelector(".modal");
+const slideWidth = slides[0].getBoundingClientRect().width;
 
 function deactivateSlide() {
   const activeSlide = document.querySelector(".modal__slide[data-active]");
@@ -11,23 +13,24 @@ export function activateSlideByIndex(index) {
   deactivateSlide();
   const newSlideIndex = (index + slides.length) % slides.length;
   slides[newSlideIndex].setAttribute("data-active", "");
+
+  modal.style.transform = `translateX(${-slideWidth * index}px)`;
 }
 
 export function activateNextSlide() {
-  console.log("activate next slide triggered");
   const activeSlideIndex = Array.from(slides).findIndex((slide) => {
     return slide.hasAttribute("data-active");
   });
-  console.log(activeSlideIndex);
-  activateSlideByIndex(activeSlideIndex + 1);
+  const nextSlideIndex = activeSlideIndex + 1;
+
+  activateSlideByIndex(nextSlideIndex);
 }
 
 export function activatePrevSlide() {
-  console.log("activate prev slide triggered");
   const activeSlideIndex = Array.from(slides).findIndex((slide) => {
     return slide.hasAttribute("data-active");
   });
-  console.log(activeSlideIndex);
+  const prevSlideIndex = activeSlideIndex - 1;
 
-  activateSlideByIndex(activeSlideIndex - 1);
+  activateSlideByIndex(prevSlideIndex);
 }
