@@ -30,8 +30,6 @@ body {
 
 .modal__container {
   position: relative;
-  /* width: 100%;
-  height: 100%; */
   border: 2px solid green;
 }
 
@@ -197,7 +195,7 @@ body {
   .modal {
     height: auto;
     margin: auto;
-    max-width: 475px;
+    max-width: 467px;
     margin: 0;
   }
 
@@ -245,7 +243,7 @@ body {
   }
 
   .next {
-    right: -5.2%;
+    right: -7%;
   }
 
   .prev,
@@ -319,23 +317,23 @@ body {
   .modal__carousel {
     margin: 0;
   }
-
-  .prev {
-    left: -5%;
-  }
 }
 
 /*Portrait*/
 @media (max-width: 430px) {
   .modal {
     height: auto;
+    width: auto;
     max-width: 330px;
     margin: 0;
+
+    border: red solid 2px;
   }
 
   .modal__slide {
     flex-direction: column;
     height: auto;
+    width: 100%;
     max-width: 330px;
     position: relative;
   }
