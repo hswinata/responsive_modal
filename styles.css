@@ -25,7 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: grey;
-  z-index: 1;
+  z-index: 0;
 }
 
 .outer {
@@ -36,6 +36,22 @@ body {
 
 .outer[data-active] {
   display: flex;
+}
+
+.modal__close {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  color: rgb(158, 155, 155);
+  border: 1px;
+
+  cursor: pointer;
+
+  z-index: 1;
 }
 
 .modal__container {
@@ -53,7 +69,7 @@ body {
 .prev {
   position: absolute;
   top: 44%;
-  z-index: 3;
+  z-index: 1;
   border: none;
   background: none;
   font-size: 40px;
@@ -95,21 +111,6 @@ body {
 
 .modal__slide[data-active] {
   display: flex;
-}
-
-.modal__close {
-  position: absolute;
-  right: 0.6%;
-  top: 1%;
-
-  width: 30px;
-  height: 30px;
-  font-size: 24px;
-  color: rgb(158, 155, 155);
-  background-color: white;
-  border: 1px;
-
-  cursor: pointer;
 }
 
 .modal__image {
@@ -198,10 +199,6 @@ body {
   background-color: #f7034e;
 }
 
-.modal__close-mobile {
-  display: none !important;
-}
-
 .modal__carousel {
   margin: 0 auto;
 }
@@ -230,10 +227,6 @@ body {
   .modal__close {
     top: 1%;
     right: 1%;
-  }
-
-  .modal__close-desktop {
-    display: none !important;
   }
 
   .modal__content {
@@ -326,10 +319,6 @@ body {
     right: 0.2%;
   }
 
-  .modal__close-mobile {
-    display: none !important;
-  }
-
   .modal__carousel {
     margin: 0;
   }
@@ -362,10 +351,6 @@ body {
   .modal__image {
     height: 330px;
     max-width: 330px;
-  }
-
-  .modal__close-desktop {
-    display: none !important;
   }
 
   .modal__content {
