@@ -1,7 +1,7 @@
 import { activateSlide } from "./slide.js";
 import { activateDot } from "./dot.js";
 
-const treshhold = 50;
+const treshold = 5;
 let startX = 0;
 let startY = 0;
 let distX = 0;
@@ -32,8 +32,8 @@ export function handleTouchEnd(e) {
   const absDistX = Math.abs(distX);
   const absDistY = Math.abs(distY);
 
-  //Only activate swipe when absDistX is bigger than 50 to avoid accidental swipes
-  if (absDistX > treshhold) {
+  //Only activate swipe when absDistX is bigger than treshold to avoid accidental swipes
+  if (absDistX > treshold) {
     //Horizontal swipe gesture detected
     if (absDistX > absDistY) {
       if (distX > 0) {
@@ -47,4 +47,8 @@ export function handleTouchEnd(e) {
       }
     }
   }
+
+  // Reset distX and distY to 0 after each swipe ends
+  distX = 0;
+  distY = 0;
 }

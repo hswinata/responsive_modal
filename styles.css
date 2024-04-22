@@ -100,6 +100,10 @@ body {
   display: flex;
 }
 
+.modal[no-transition] {
+  transition: none;
+}
+
 .modal__slide {
   display: flex;
   flex-direction: row;
@@ -316,7 +320,11 @@ body {
   }
 
   .modal__close {
-    right: 0.2%;
+    top: 1%;
+    right: 0.5% !important;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
   }
 
   .modal__carousel {
@@ -331,8 +339,6 @@ body {
     width: auto;
     max-width: 330px;
     margin: 0;
-
-    border: red solid 2px;
   }
 
   .modal__slide {

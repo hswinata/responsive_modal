@@ -1,6 +1,27 @@
 export const slides = document.querySelectorAll(".modal__slide");
 const modal = document.querySelector(".modal");
-const slideWidth = slides[0].getBoundingClientRect().width;
+let slideWidth = slides[0].getBoundingClientRect().width;
+
+//Update slideWidth and remove transition when resizing.
+window.addEventListener("resize", () => {
+  let resizedWidth = slides[0].getBoundingClientRect().width;
+  if (slideWidth !== resizedWidth) {
+    modal.setAttribute("no-transition", "");
+    slideWidth = resizedWidth;
+    modal.style.transform = `translateX(${
+      -slideWidth * getCurrentSlideIndex()
+    }px)`;
+  }
+});
+
+//Add transition again after finished resizing.
+window.addEventListener("touchend", () => {
+  modal.removeAttribute("no-transition");
+});
+
+window.addEventListener("mouseup", () => {
+  modal.removeAttribute("no-transition");
+});
 
 export const getCurrentSlideIndex = () =>
   Array.from(slides).findIndex((slide) => slide.hasAttribute("data-active"));
