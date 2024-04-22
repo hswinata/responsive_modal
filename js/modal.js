@@ -1,7 +1,7 @@
 export function closeModal() {
-  const activeSlide = document.querySelector(".modal[data-active]");
+  const activeContainer = document.querySelector(".outer[data-active]");
   const carousel = document.querySelector(".modal__carousel[data-active]");
 
-  activeSlide.removeAttribute("data-active");
+  activeContainer.removeAttribute("data-active");
   carousel.removeAttribute("data-active");
 }
