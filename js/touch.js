@@ -1,5 +1,5 @@
-import { activateNextSlide, activatePrevSlide } from "./slide.js";
-import { activateNextDot, activatePrevDot } from "./dot.js";
+import { activateSlide } from "./slide.js";
+import { activateDot } from "./dot.js";
 
 const treshhold = 50;
 let startX = 0;
@@ -38,12 +38,12 @@ export function handleTouchEnd(e) {
     if (absDistX > absDistY) {
       if (distX > 0) {
         //swipeRight
-        activatePrevSlide();
-        activatePrevDot();
+        activateSlide("prev");
+        activateDot();
       } else {
         //swipeLeft
-        activateNextSlide();
-        activateNextDot();
+        activateSlide("next");
+        activateDot();
       }
     }
   }

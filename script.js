@@ -1,16 +1,6 @@
 import { closeModal } from "./js/modal.js";
-import {
-  slides,
-  activateNextSlide,
-  activatePrevSlide,
-  activateSlideByIndex,
-} from "./js/slide.js";
-import {
-  dots,
-  activateNextDot,
-  activatePrevDot,
-  activateDotByIndex,
-} from "./js/dot.js";
+import { slides, activateSlide, activateSlideByIndex } from "./js/slide.js";
+import { dots, activateDot } from "./js/dot.js";
 
 import {
   handleTouchStart,
@@ -24,19 +14,19 @@ const nextButton = document.querySelector(".next");
 
 //Prev and next button functions
 nextButton.addEventListener("click", (e) => {
-  activateNextSlide();
-  activateNextDot();
+  activateSlide("next");
+  activateDot();
 });
 
 prevButton.addEventListener("click", (e) => {
-  activatePrevSlide();
-  activatePrevDot();
+  activateSlide("prev");
+  activateDot();
 });
 
 // Dot click functions
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
-    activateDotByIndex(index);
+    activateDot(index);
     activateSlideByIndex(index);
   });
 });

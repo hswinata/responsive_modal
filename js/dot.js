@@ -1,3 +1,5 @@
+import { getCurrentSlideIndex } from "./slide.js";
+
 export const dots = document.querySelectorAll(".modal__carousel-dot");
 
 function deactivateDot() {
@@ -7,22 +9,9 @@ function deactivateDot() {
   }
 }
 
-export function activateDotByIndex(index) {
+export function activateDot(index = getCurrentSlideIndex()) {
   deactivateDot();
+
   const newDotIndex = (index + dots.length) % dots.length;
   dots[newDotIndex].setAttribute("data-active", "");
-}
-
-export function activateNextDot() {
-  const activeDotIndex = Array.from(dots).findIndex((dot) => {
-    return dot.hasAttribute("data-active");
-  });
-  activateDotByIndex(activeDotIndex + 1);
-}
-
-export function activatePrevDot() {
-  const activeDotIndex = Array.from(dots).findIndex((dot) => {
-    return dot.hasAttribute("data-active");
-  });
-  activateDotByIndex(activeDotIndex - 1);
 }
