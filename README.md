@@ -16,6 +16,7 @@ Elevate user engagement with a responsive modal component featuring smooth trans
     * **Slide Navigation:**
         * Handles user interaction with "next" and "previous" buttons to navigate between slides.
         * Provides functions `activateSlide` and `activateSlideByIndex` for programmatic slide control (optional depending on your implementation).
+   ![Alt Text](./responsive_modal.gif)
     * **Dot Navigation:**
         * Enables users to switch slides by clicking on the navigation dots.
         * Utilizes functions `activateDot` and `activateSlideByIndex` for synchronization between dots and slides.
