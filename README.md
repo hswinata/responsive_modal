@@ -14,12 +14,15 @@ Elevate user engagement with a responsive modal component featuring smooth trans
 2. **JavaScript**:
    The JavaScript code manages the interactive behavior of the modal component, including:
     * **Slide Navigation:**
+      ![slide_navigation.gif](./responsive_modal.gif)
         * Handles user interaction with "next" and "previous" buttons to navigate between slides.
         * Provides functions `activateSlide` and `activateSlideByIndex` for programmatic slide control (optional depending on your implementation).
-   ![Alt Text](./responsive_modal.gif)
+
     * **Dot Navigation:**
+      
         * Enables users to switch slides by clicking on the navigation dots.
         * Utilizes functions `activateDot` and `activateSlideByIndex` for synchronization between dots and slides.
+
     * **Modal Closing:**
         * Listens for clicks on designated close buttons and triggers the `closeModal` function to hide the modal.
     * **Touch Interaction (Mobile Devices):**
