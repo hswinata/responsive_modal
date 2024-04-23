@@ -1,6 +1,6 @@
 # Responsive Modal with Swipe Navigation & Transitions
 
-[👆View Demo👆](https://hswinata.github.io/admindashboard/) 
+[👆VEW MODAL👆](https://hswinata.github.io/responsive_modal/) 
 
 Elevate user engagement with a responsive modal component featuring smooth transitions and intuitive swipe navigation. This versatile component seamlessly adapts to various devices and orientations (desktop, mobile landscape, mobile portrait) for a consistent user experience.
 
