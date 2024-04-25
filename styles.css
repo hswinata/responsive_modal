@@ -164,7 +164,7 @@ body {
   max-width: 200px;
   height: 45px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .main-btn {
@@ -210,7 +210,7 @@ body {
 /*Portrait*/
 @media (max-width: 934px) {
   .modal {
-    height: auto;
+    height: 100%;
     margin: auto;
     max-width: 467px;
     margin: 0;
@@ -218,32 +218,40 @@ body {
 
   .modal__slide {
     flex-direction: column;
-    height: auto;
+    height: 100%;
     max-width: 100%;
     position: relative;
   }
 
   .modal__image {
-    height: 330px;
-    flex-basis: 330px;
+    height: 285px;
+    background-size: 250px;
   }
 
   .modal__close {
     top: 1%;
-    right: 1%;
   }
 
   .modal__content {
+    height: 285px;
     align-items: center;
-    height: auto;
     max-width: 475px;
     flex-basis: auto;
+  }
+
+  .modal__content-header {
+    font-size: 26px;
+  }
+
+  .modal__content-text {
+    font-size: 16px;
   }
 
   .main-btn,
   .secondary-btn {
     width: 200px;
     padding: 0 20px;
+    font-size: 14px;
   }
 
   .modal__carousel {
@@ -316,7 +324,12 @@ body {
   }
 
   .modal__content-button {
-    max-width: 250px;
+    max-width: 300px;
+  }
+
+  .main-btn,
+  .secondary-btn {
+    font-size: 14px;
   }
 
   .modal__close {
